@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Классификаторы</title>
+    </head>
+    <body>
+        <h1>Классификация текста</h1>
+        <form action="http://0.0.0.0:8080/tmp?text=123" method="GET">
+            <input name="text" placeholder="Введите текст" /> <br>
+            <input name="type" type="radio" value="nb" checked> Multinomial Naive Bayes <br>
+            <input name="type" type="radio" value="svg"> SVG <br>
+            <input name="type" type="radio" value="abc"> ABABAB <br>
+            <button type="submit">Запустить классификатор</button>
+        </form>
+    </body>
+</html>
