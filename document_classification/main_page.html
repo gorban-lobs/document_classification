@@ -5,15 +5,29 @@
         <title>Классификаторы</title>
     </head>
     <body>
-        <h1>Классификация текста</h1>
+        <h2>Классификация текста</h2>
         <form action="/" method="GET">
-            <input name="text" placeholder="Введите текст" /> <br>
-            <input name="type" type="radio" value="nb" checked> Multinomial Naive Bayes <br>
-            <input name="type" type="radio" value="svg"> SVG <br>
-            <input name="type" type="radio" value="abc"> ABABAB <br>
-            <button type="submit">Запустить классификатор</button>
+            <div style="margin: 20px 30px">
+                <div style="margin: 20px">
+                    <div>
+                        <input name="type" type="radio" value="nb"> Multinomial Naive Bayes
+                        <input name="type" type="radio" value="svg" height="100" width="100"> SVG
+                        <input name="type" type="radio" value="abc"> TMP
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <textarea name="text" placeholder="Введите текст" rows="5" cols="50">{input_text}</textarea>
+                    </div>
+                </div>
+            </div>
+            <button style="margin: 0px 0px 20px 120px; padding: 5px; font-size: 16px" type="submit">
+                Запустить классификатор
+            </button>
         </form>
-        <label for="result">Результат:</label>
-        <textarea id="result">{result}</textarea
+        <div style="margin: 10px 30px">
+            <label style="font-size: 20px" for="result">Результат:</label> <br>
+            <textarea id="result">{result}</textarea>
+        </div>
     </body>
 </html>
