@@ -63,7 +63,7 @@ class MultiClassifier:
             'misc.forsale': 'Продажи',
             'talk.politics.misc': 'Политика (разное)',
             'talk.politics.guns': 'Политика (оружие)',
-            'talk.politics.mideast': 'Политика (Ближний Восток)',
+            'talk.politics.mideast': 'Политика (Средний Восток)',
             'talk.religion.misc': 'Религия (разное)',
             'alt.atheism': 'Атеизм',
             'soc.religion.christian': 'Религия (христианство)',
