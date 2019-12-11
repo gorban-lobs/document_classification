@@ -1,9 +1,8 @@
 import numpy as np
-from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import SGDClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 
 class MultiClassifier:
@@ -25,14 +24,14 @@ class MultiClassifier:
                                        max_iter=5, tol=None)
         sgd_classifier.fit(self.vectorized_train_data, train_target)
 
-        # rand_forest_classifier = RandomForestClassifier(n_estimators=len(train_target),
-        #                                                 random_state=0)
-        # rand_forest_classifier.fit(self.vectorized_train_data, train_target)
+        knn_classifier = KNeighborsClassifier(n_neighbors=30,
+                                              weights='distance')
+        knn_classifier.fit(self.vectorized_train_data, train_target)
 
         return {
             'nb': bayes_classifier,
-            'svg': sgd_classifier,
-            # 'rf': rand_forest_classifier,
+            'sgd': sgd_classifier,
+            'knn': knn_classifier,
         }
 
     def classify_text(self, text, classifier_name):
