@@ -1,10 +1,8 @@
 from aiohttp import web
 
-from handlers import get_start_page
-
+from handlers import handler
 
 def set_routes():
     return [
-        web.get('/', get_start_page),
-
+        web.get('/', handler),
     ]
