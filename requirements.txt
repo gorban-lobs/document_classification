@@ -1,1 +1,2 @@
 scikit-learn==0.22
+aiohttp==3.6.2
