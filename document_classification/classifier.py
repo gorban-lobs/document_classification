@@ -28,8 +28,8 @@ class MultiClassifier:
         # rand_forest_classifier.fit(self.vectorized_train_data, train_target)
 
         return {
-            'bayes': bayes_classifier,
-            'sgd': sgd_classifier,
+            'nb': bayes_classifier,
+            'svg': sgd_classifier,
             # 'rf': rand_forest_classifier,
         }
 
