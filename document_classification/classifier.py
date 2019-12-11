@@ -40,24 +40,4 @@ class MultiClassifier:
             vectorized_text = self.vectorizer.transform(text_data)
             result_indices = classifier.predict(vectorized_text)
             return self.class_names[result_indices[0]]
-        return None
-
-
-if __name__ == '__main__':
-    train_dataset = fetch_20newsgroups(subset='train',
-                                       remove=('headers', 'footers', 'quotes'))
-    multiclassifier = MultiClassifier(train_dataset.data, train_dataset.target,
-                                 train_dataset.target_names)
-
-    cur_text = "Retro motorcycle design is hot right now, " + \
-        "and it’s a great time to shop for one because this trend " + \
-        "isn’t just for high-dollar machines. Just about every segment " + \
-        "of motorcycling has a vintage feel and half the bikes on this " + \
-        "list have a cool back-in-the-day flavor. " + \
-        "Here are the latest bikes, " + \
-        "both retro and modern, that offer a big bang for the buck."
-
-    result = multiclassifier.classify_text(
-        cur_text,
-        'sgd')
-    print(result)
+        return "Неправильный тип классификатора"
